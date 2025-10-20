@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unidad Educativa Carmen Mora de Encalada</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Pantalla de bienvenida -->
+  <div id="splash">
+    <h1>Bienvenido/a</h1>
+    <p>a la app informativa de la Unidad Educativa</p>
+    <h2>Carmen Mora de Encalada</h2>
+  </div>
+
+  <!-- Contenido principal -->
+  <div id="app" class="hidden">
+    <nav>
+      <button onclick="mostrarSeccion('historia')">Historia</button>
+      <button onclick="mostrarSeccion('especialidades')">Especialidades</button>
+      <button onclick="mostrarSeccion('preguntas')">Preguntas frecuentes</button>
+    </nav>
+
+    <main id="contenido">
+      <!-- Sección Historia -->
+      <section id="historia" class="seccion activa">
+        <h2>Historia</h2>
+        <p>
+          La “Unidad Educativa Carmen Mora de Encalada” ha sido un pilar educativo en la comunidad, formando generaciones de estudiantes con valores, conocimiento y compromiso social. Su trayectoria refleja el esfuerzo de docentes, padres y alumnos en busca de la excelencia educativa.
+        </p>
+        <p>
+          Su primer rector fue el señor Profesor Juan Arévalo Ordoñez, habido y experimentado, quien edificó las bases en donde se asentaría posteriormente el prestigio del plantel. En el año lectivo de 1965-1966 se receptan las matrículas de 65 alumnos iniciando sus labores en el mes de mayo.
+        </p>
+        <p>
+          El doctor César Jaramillo Pérez, ministro de Educación Pública, con resolución número 1912 del 29 de octubre de ese mismo año, autoriza el funcionamiento del Primer Curso Regular diurno, en la especialización de Comercio y Administración.
+        </p>
+        <p>
+          Cuando el Colegio inicia su año lectivo 1967-1968, y al haber sido renovado el Consejo, es nombrado como rector del Plantel, el señor Carlos Falquez Batallas, reemplazando al señor Juan Arévalo Ordoñez. El 10 de octubre de 1969, el presidente Dr. José María Velasco Ibarra suscribió el decreto No. 2009, nacionalizando el colegio a partir del 1 de abril de 1970.
+        </p>
+        <p>
+          En los años siguientes, se adquirieron terrenos, se construyó el edificio monumental y se consolidó la institución hasta convertirse en uno de los mejores del país en 1979, con 1600 estudiantes, 80 profesores y personal administrativo y de servicio. 
+        </p>
+        <p>
+          El Prof. Carlos Falquez Batallas, un hombre visionario, con sabiduría, coraje y dinamismo, apoyado en el consejo directivo, personal docente, padres y estudiantes, cosechó frutos notables en lo cultural, artístico, social y deportivo. En junio de 1979, renuncia y es sucedido por el licenciado Ángel Valarezo Concha como Vicerrector Titular.
+        </p>
+      </section>
+
+      <!-- Sección Especialidades -->
+      <section id="especialidades" class="seccion">
+        <h2>Especialidades</h2>
+        <p>Contamos con tres especialidades técnicas para el desarrollo académico:</p>
+        <div class="subopciones">
+          <button onclick="mostrarSubseccion('ciencias')">Ciencias</button>
+          <button onclick="mostrarSubseccion('contabilidad')">Contabilidad</button>
+          <button onclick="mostrarSubseccion('informatica')">Informática</button>
+        </div>
+
+        <div id="subcontenido">
+          <div id="ciencias" class="subseccion activa">
+            <h3>Ciencias</h3>
+            <p>
+              Enfocada en la formación académica integral, promueve el pensamiento crítico y el análisis
+              de fenómenos naturales y sociales, preparando a los estudiantes para estudios universitarios.
+            </p>
+          </div>
+          <div id="contabilidad" class="subseccion">
+            <h3>Contabilidad</h3>
+            <p>
+              Forma profesionales técnicos en el área contable y administrativa, con competencias
+              en registros financieros, gestión y planificación económica.
+            </p>
+          </div>
+          <div id="informatica" class="subseccion">
+            <h3>Informática</h3>
+            <p>
+              Desarrolla habilidades tecnológicas, de programación y soporte técnico,
+              impulsando la innovación digital en entornos educativos y laborales.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Preguntas frecuentes -->
+      <section id="preguntas" class="seccion">
+        <h2>Preguntas frecuentes</h2>
+        <ul>
+          <li><strong>¿Cuál es la nota mínima para pasar el año lectivo?</strong><br>La nota mínima es de 7 sobre 10.</li>
+          <li><strong>Contacto de la institución:</strong><br>Teléfono: (07) 123-4567 — Dirección: Loja, Ecuador.</li>
+          <li><strong>¿Es obligatorio jurar la bandera?</strong><br>Sí, es un acto cívico obligatorio en el sistema educativo ecuatoriano.</li>
+          <li><strong>¿Qué se puede hacer para recuperar el trimestre?</strong><br>Se puede rendir un examen de recuperación o realizar actividades complementarias según lo disponga la institución.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
