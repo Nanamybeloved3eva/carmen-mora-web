@@ -11,4 +11,4 @@ App web informativa creada para mostrar la historia, especialidades y preguntas 
 Diseño en tonos verde pastel y blanco con pantalla de bienvenida animada.
 
 ### Creado por
-**Alejandra Buele (Nanamybeloved4eva)** — Proyecto educativo.
+**Alejandra Buele (Nanamybeloved4eva)** — Proyecto educativo
