@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unidad Educativa Carmen Mora de Encalada</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Pantalla de bienvenida -->
+  <div id="splash">
+    <h1>Bienvenidos a la Unidad Educativa<br>Carmen Mora de Encalada</h1>
+  </div>
+
+  <!-- Contenido principal -->
+  <div id="app" class="hidden">
+
+    <nav>
+      <button onclick="mostrarSeccion('historia')">Historia</button>
+      <button onclick="mostrarSeccion('especialidades')">Especialidades</button>
+      <button onclick="mostrarSeccion('preguntas')">Preguntas Frecuentes</button>
+    </nav>
+
+    <!-- Sección: Historia -->
+    <section id="historia" class="seccion activa">
+      <h2>Historia de la Institución</h2>
+
+      <!-- 📸 Aquí puedes poner una o varias imágenes -->
+      <img src="images/historia.jpg" alt="Foto del colegio" class="foto-colegio">
+      <img src="images/colegio1.jpg" alt="Instalaciones del plantel" class="foto-colegio">
+
+      <p>
+        La “Unidad Educativa Carmen Mora de Encalada” ha sido un pilar educativo en la comunidad,
+        formando generaciones de estudiantes con valores, conocimiento y compromiso social.
+        Su trayectoria refleja el esfuerzo de docentes, padres y alumnos en busca de la excelencia educativa.
+      </p>
+
+      <p>
+        Su primer rector fue el señor Profesor Juan Arévalo Ordoñez, habido y experimentado, quien edificó las bases
+        en donde se asentaría posteriormente el prestigio del plantel...
+      </p>
+    </section>
+
+    <!-- Sección: Especialidades -->
+    <section id="especialidades" class="seccion">
+      <h2>Especialidades</h2>
+
+      <!-- 📸 Imagen opcional general -->
+      <img src="images/especialidades.jpg" alt="Estudiantes de especialidades" class="foto-colegio">
+
+      <p>En la Unidad Educativa Carmen Mora de Encalada ofrecemos tres especialidades:</p>
+      <div class="submenu">
+        <button onclick="mostrarSubseccion('ciencias')">Ciencias</button>
+        <button onclick="mostrarSubseccion('contabilidad')">Contabilidad</button>
+        <button onclick="mostrarSubseccion('informatica')">Informática</button>
+      </div>
+
+      <!-- Subsecciones -->
+      <div id="ciencias" class="subseccion activa">
+        <h3>Ciencias</h3>
+        <img src="images/ciencias.jpg" alt="Laboratorio de Ciencias" class="foto-colegio">
+        <p>La especialidad de Ciencias fomenta el pensamiento crítico, el método científico y la investigación.</p>
+      </div>
+
+      <div id="contabilidad" class="subseccion">
+        <h3>Contabilidad</h3>
+        <img src="images/contabilidad.jpg" alt="Estudiantes de Contabilidad" class="foto-colegio">
+        <p>Los estudiantes aprenden sobre gestión empresarial, finanzas y administración contable.</p>
+      </div>
+
+      <div id="informatica" class="subseccion">
+        <h3>Informática</h3>
+        <img src="images/informatica.jpg" alt="Laboratorio de informática" class="foto-colegio">
+        <p>Esta especialidad desarrolla habilidades en programación, redes y tecnología digital.</p>
+      </div>
+    </section>
+
+    <!-- Sección: Preguntas frecuentes -->
+    <section id="preguntas" class="seccion">
+      <h2>Preguntas Frecuentes</h2>
+      <ul>
+        <li><strong>¿Cuál es la nota mínima para pasar el año lectivo?</strong><br> La nota mínima es 7/10.</li>
+        <li><strong>¿Es obligatorio jurar la bandera?</strong><br> Sí, es un acto cívico obligatorio para los estudiantes de tercero de bachillerato.</li>
+        <li><strong>¿Qué se puede hacer para recuperar el trimestre?</strong><br> Presentar las tareas pendientes o rendir exámenes de recuperación según el cronograma.</li>
+        <li><strong>¿Cómo contactar con la institución?</strong><br> Puedes comunicarte al correo: <em>uecarmenmoradeencalada@educacion.gob.ec</em></li>
+      </ul>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
