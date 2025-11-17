@@ -1,102 +1,89 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unidad Educativa Carmen Mora de Encalada</title>
+<!-- Sección: Especialidades -->
+<section id="especialidades" class="seccion">
+  <h2>Especialidades</h2>
 
-  <link rel="stylesheet" href="styles.css">
-  <link rel="manifest" href="manifest.json">
+  <!-- Imagen general -->
+  <img src="images/especialidades.jpg" alt="Estudiantes de especialidades" class="foto-colegio">
 
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("service-worker.js");
-    }
-  </script>
-</head>
-<body>
+  <p>En la Unidad Educativa Carmen Mora de Encalada ofrecemos tres especialidades:</p>
 
-  <!-- Pantalla de bienvenida -->
-  <div id="splash">
-    <h1>Bienvenidos a la Unidad Educativa<br>Carmen Mora de Encalada</h1>
+  <div class="submenu">
+    <button onclick="mostrarSubseccion('ciencias')">Ciencias</button>
+    <button onclick="mostrarSubseccion('contabilidad')">Contabilidad</button>
+    <button onclick="mostrarSubseccion('informatica')">Informática</button>
   </div>
 
-  <!-- Contenido principal -->
-  <div id="app" class="hidden">
 
-    <nav>
-      <button onclick="mostrarSeccion('historia')">Historia</button>
-      <button onclick="mostrarSeccion('especialidades')">Especialidades</button>
-      <button onclick="mostrarSeccion('preguntas')">Preguntas Frecuentes</button>
-    </nav>
+  <!-- ============================= -->
+  <!--          CIENCIAS            -->
+  <!-- ============================= -->
+  <div id="ciencias" class="subseccion activa">
+    <h3>Ciencias</h3>
 
-    <!-- Sección: Historia -->
-    <section id="historia" class="seccion activa">
-      <h2>Historia de la Institución</h2>
+    <!-- Foto inicial -->
+    <img src="images/ciencias1.jpeg" alt="Laboratorio de Ciencias" class="foto-colegio">
 
-      <!-- 📸 Aquí puedes poner una o varias imágenes -->
-      <img src="images/historia.jpg" alt="Foto del colegio" class="foto-colegio">
-      <img src="images/colegio1.jpg" alt="Instalaciones del plantel" class="foto-colegio">
+    <p>
+      La especialidad de Ciencias impulsa la investigación, el pensamiento crítico y el razonamiento
+      lógico a través de materias relacionadas con la biología, química y física.
+    </p>
 
-      <p>
-        La “Unidad Educativa Carmen Mora de Encalada” ha sido un pilar educativo en la comunidad,
-        formando generaciones de estudiantes con valores, conocimiento y compromiso social.
-        Su trayectoria refleja el esfuerzo de docentes, padres y alumnos en busca de la excelencia educativa.
-      </p>
+    <p>
+      Los estudiantes desarrollan habilidades científicas mediante prácticas de laboratorio,
+      proyectos experimentales y actividades orientadas a la comprensión del entorno natural.
+    </p>
 
-      <p>
-        Su primer rector fue el señor Profesor Juan Arévalo Ordoñez, habido y experimentado, quien edificó las bases
-        en donde se asentaría posteriormente el prestigio del plantel...
-      </p>
-    </section>
-
-    <!-- Sección: Especialidades -->
-    <section id="especialidades" class="seccion">
-      <h2>Especialidades</h2>
-
-      <!-- 📸 Imagen opcional general -->
-      <img src="images/especialidades.jpg" alt="Estudiantes de especialidades" class="foto-colegio">
-
-      <p>En la Unidad Educativa Carmen Mora de Encalada ofrecemos tres especialidades:</p>
-      <div class="submenu">
-        <button onclick="mostrarSubseccion('ciencias')">Ciencias</button>
-        <button onclick="mostrarSubseccion('contabilidad')">Contabilidad</button>
-        <button onclick="mostrarSubseccion('informatica')">Informática</button>
-      </div>
-
-      <!-- Subsecciones -->
-      <div id="ciencias" class="subseccion activa">
-        <h3>Ciencias</h3>
-        <img src="images/ciencias.jpg" alt="Laboratorio de Ciencias" class="foto-colegio">
-        <p>La especialidad de Ciencias fomenta el pensamiento crítico, el método científico y la investigación.</p>
-      </div>
-
-      <div id="contabilidad" class="subseccion">
-        <h3>Contabilidad</h3>
-        <img src="images/contabilidad.jpg" alt="Estudiantes de Contabilidad" class="foto-colegio">
-        <p>Los estudiantes aprenden sobre gestión empresarial, finanzas y administración contable.</p>
-      </div>
-
-      <div id="informatica" class="subseccion">
-        <h3>Informática</h3>
-        <img src="images/informatica.jpg" alt="Laboratorio de informática" class="foto-colegio">
-        <p>Esta especialidad desarrolla habilidades en programación, redes y tecnología digital.</p>
-      </div>
-    </section>
-
-    <!-- Sección: Preguntas frecuentes -->
-    <section id="preguntas" class="seccion">
-      <h2>Preguntas Frecuentes</h2>
-      <ul>
-        <li><strong>¿Cuál es la nota mínima para pasar el año lectivo?</strong><br> La nota mínima es 7/10.</li>
-        <li><strong>¿Es obligatorio jurar la bandera?</strong><br> Sí, es un acto cívico obligatorio para los estudiantes de tercero de bachillerato.</li>
-        <li><strong>¿Qué se puede hacer para recuperar el trimestre?</strong><br> Presentar las tareas pendientes o rendir exámenes de recuperación según el cronograma.</li>
-        <li><strong>¿Cómo contactar con la institución?</strong><br> Puedes comunicarte al correo: <em>uecarmenmoradeencalada@educacion.gob.ec</em></li>
-      </ul>
-    </section>
-
+    <!-- Foto final -->
+    <img src="images/ciencias2.jpeg" alt="Laboratorio de Ciencias 2" class="foto-colegio">
   </div>
 
-  <script src="app.js"></script>
-</body>
-</html>
+
+  <!-- ============================= -->
+  <!--        CONTABILIDAD          -->
+  <!-- ============================= -->
+  <div id="contabilidad" class="subseccion">
+    <h3>Contabilidad</h3>
+
+    <!-- Foto inicial -->
+    <img src="images/contabilidad1.jpg" alt="Estudiantes de Contabilidad" class="foto-colegio">
+
+    <p>
+      La especialidad de Contabilidad prepara a los estudiantes en procesos financieros,
+      tributarios y administrativos, aportando las bases para desenvolverse en el ámbito empresarial.
+    </p>
+
+    <p>
+      Se desarrollan habilidades en el manejo de documentos comerciales, estados financieros,
+      sistemas contables y emprendimiento económico.
+    </p>
+
+    <!-- Foto final -->
+    <img src="images/contabilidad2.jpeg" alt="Contabilidad 2" class="foto-colegio">
+  </div>
+
+
+  <!-- ============================= -->
+  <!--         INFORMÁTICA          -->
+  <!-- ============================= -->
+  <div id="informatica" class="subseccion">
+    <h3>Informática</h3>
+
+    <!-- Foto inicial -->
+    <img src="images/Zona-7-prototipo-2.png" alt="Laboratorio de informática" class="foto-colegio">
+
+    <p>
+      La especialidad de Informática fomenta el desarrollo de habilidades en programación,
+      diseño de software, redes, bases de datos y tecnologías digitales.
+    </p>
+
+    <p>
+      Los estudiantes trabajan con herramientas modernas que les permiten crear proyectos,
+      aplicaciones, páginas web y soluciones tecnológicas útiles para su futuro profesional.
+    </p>
+
+    <!-- Foto final -->
+    <img src="images/Zona-7-prototipo-3.png" alt="Laboratorio de informática 2" class="foto-colegio">
+  </div>
+
+</section>
+
