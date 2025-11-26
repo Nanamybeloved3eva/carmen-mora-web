@@ -1,152 +1,122 @@
+/* ======= ESTILO GENERAL ======= */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f0fdf4;
-  color: #1b4332;
-  margin: 0;
-  text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
 }
 
-/* Pantalla de inicio */
-#inicio-app {
-  padding: 40px;
-  margin-top: 50px;
+/* ======= BIENVENIDA ======= */
+#welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0c4b33; /* verde oscuro institucional */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 9999;
+    animation: fadeOut 2.5s ease-out forwards;
+    animation-delay: 2.3s;  /* permanece visible unos segundos antes de desvanecerse */
 }
 
-#inicio-app h1 {
-  font-size: 1.8em;
-  margin-bottom: 15px;
+/* Texto grande */
+#welcome-screen h1 {
+    font-size: 40px;
+    margin: 0;
+    padding: 0 20px;
 }
 
-#inicio-app p {
-  font-size: 1.1em;
-  margin-bottom: 20px;
+#welcome-screen p {
+    font-size: 20px;
+    margin-top: 10px;
 }
 
-#inicio-app button {
-  background-color: #66bb6a;
-  border: none;
-  padding: 12px 20px;
-  font-size: 1.1em;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
+/* Animación de desvanecimiento */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
 }
 
-#inicio-app button:hover {
-  background-color: #4caf50;
-}
-
-/* Ocultar */
-.hidden {
-  display: none;
-}
-
-/* Barra de navegación */
+/* ======= MENÚ SUPERIOR ======= */
 nav {
-  background-color: #c8e6c9;
-  padding: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 5;
+    width: 100%;
+    background: #0c4b33;
+    padding: 12px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-nav button {
-  margin: 5px;
-  background: #81c784;
-  border: none;
-  padding: 10px 15px;
-  color: white;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-nav button:hover {
-  background: #66bb6a;
+nav a:hover {
+    text-decoration: underline;
 }
 
-/* Secciones principales */
-.seccion {
-  display: none;
-  padding: 20px;
+/* ======= SECCIONES ======= */
+section {
+    padding: 25px;
+    margin: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-.seccion.activa {
-  display: block;
-  animation: fadeIn 0.8s ease;
+/* ======= BOTONES DE ESPECIALIDADES ======= */
+.specialty-buttons {
+    text-align: center;
+    margin-bottom: 25px;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.specialty-buttons button {
+    background: #198754; /* verde bootstrap */
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background 0.3s;
 }
 
-/* Imágenes */
-.foto-colegio {
-  width: 85%;
-  max-width: 480px;
-  border-radius: 14px;
-  display: block;
-  margin: 20px auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+.specialty-buttons button:hover {
+    background: #146c43;
 }
 
-/* Submenú de especialidades */
-.submenu {
-  margin: 15px 0;
+/* ======= IMÁGENES DE GALERÍA ======= */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
-.submenu button {
-  margin: 5px;
-  background: #aed581;
-  color: #1b4332;
-  border: none;
-  border-radius: 10px;
-  padding: 10px 14px;
-  cursor: pointer;
-  transition: background 0.3s;
-  font-weight: bold;
+.gallery img {
+    width: 200px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
 }
 
-.submenu button:hover {
-  background: #9ccc65;
-}
-
-/* Sub-secciones (especialidades) */
-.subseccion {
-  display: none;
-}
-
-.subseccion.activa {
-  display: block;
-}
-
-/* Preguntas frecuentes */
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  background: #e8f5e9;
-  margin: 10px auto;
-  padding: 12px;
-  border-radius: 10px;
-  width: 85%;
-  max-width: 600px;
-  text-align: left;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-/* Títulos */
+/* ======= TITULOS ======= */
 h2 {
-  margin-top: 10px;
-}
-
-h3 {
-  margin-top: 25px;
+    text-align: center;
+    color: #0c4b33;
+    margin-top: 0;
 }
