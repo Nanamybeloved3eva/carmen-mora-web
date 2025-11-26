@@ -17,12 +17,11 @@
 <body>
 
   <!-- INICIO / BIENVENIDA -->
-  <div id="inicio-app">
-    <h1>Bienvenidos a la Unidad Educativa<br>Carmen Mora de Encalada</h1>
-    <p>Explora la historia, especialidades y preguntas frecuentes de nuestra institución.</p>
+<div id="splash">
+    <h1>¡Bienvenido a la App del Colegio!</h1>
+    <p>Explora nuestra historia, especialidades y más.</p>
+</div>
 
-    <button id="btn-entrar">Entrar</button>
-  </div>
 
   <!-- CONTENIDO PRINCIPAL -->
   <div id="app" class="hidden">
@@ -33,6 +32,31 @@
       <button onclick="mostrarSeccion('especialidades')">Especialidades</button>
       <button onclick="mostrarSeccion('preguntas')">Preguntas Frecuentes</button>
     </nav>
+
+        <!-- ================= NUEVA SECCIÓN: INICIO ================= -->
+    <section id="inicio" class="seccion">
+      <h2>Bienvenido a la Aplicación Informativa</h2>
+      <p>
+        Esta aplicación ha sido diseñada para proporcionar una experiencia clara,
+        sencilla y organizada sobre la Unidad Educativa Carmen Mora de Encalada.
+        Aquí podrás encontrar información importante acerca de nuestra historia,
+        las especialidades que ofrecemos y una sección completa de preguntas
+        frecuentes para resolver tus dudas.
+      </p>
+
+      <p>
+        Desde este menú principal puedes navegar cómodamente entre las secciones,
+        ya sea para conocer más sobre el legado institucional, explorar en detalle
+        las características de cada especialidad o informarte sobre los horarios,
+        materias y proyectos de grado.
+      </p>
+
+      <p>
+        Nuestro objetivo es brindarte una guía rápida y accesible que represente
+        de manera fiel a nuestra institución y te facilite el acceso a información
+        relevante en cualquier momento. ¡Gracias por utilizar esta aplicación!
+      </p>
+    </section>
 
     <!-- ================= HISTORIA ================= -->
     <section id="historia" class="seccion activa">
@@ -235,6 +259,7 @@
   </script>
 </body>
 </html>
+
 
 
 
