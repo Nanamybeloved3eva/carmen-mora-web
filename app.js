@@ -20,17 +20,14 @@ function mostrarSubseccion(id) {
     }
 }
 
-// Pantalla de bienvenida → entrar al contenido
-document.addEventListener("DOMContentLoaded", () => {
-    const inicio = document.getElementById("inicio-app");
-    const app = document.getElementById("app");
-    const btn = document.getElementById("btn-entrar");
+// Pantalla de bienvenida original
+window.addEventListener("load", () => {
+  const splash = document.getElementById("splash");
+  setTimeout(() => {
+    splash.classList.add("hidden");
+  }, 2300);
+});
 
-    if (btn) {
-        btn.addEventListener("click", () => {
-            inicio.classList.add("hidden");
-            app.classList.remove("hidden");
-            mostrarSeccion("historia");
-        });
     }
 });
+
