@@ -17,6 +17,8 @@ function mostrarSubseccion(id) {
     if (el) {
         el.classList.add('activa');
         el.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        
     }
 }
 
@@ -30,4 +32,5 @@ window.addEventListener("load", () => {
 
     }
 });
+
 
