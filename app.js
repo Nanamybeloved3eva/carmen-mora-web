@@ -31,6 +31,13 @@ window.addEventListener("load", () => {
 });
 
     }
+
+// otras funciones de navegación y lógica...
+
+document.addEventListener("DOMContentLoaded", function() {
+    mostrarSeccion("inicio"); // <--- hará que INICIO sea lo primero que se vea
 });
+
+
 
 
